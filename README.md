@@ -1,2 +1,6 @@
-# MC322A-1s2022
-Repositório para a disciplina MC322 - Programação Orientada a Objetos da Unicamp
+# Aluno
+Nome: João Víctor dos Santos Oliveira
+RA: 199815
+
+#Curso
+Engenharia de Computação
