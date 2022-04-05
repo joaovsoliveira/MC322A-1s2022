@@ -29,6 +29,18 @@ public class AppLombriga {
       lombriga.apresenta();
       lombriga.mover();
       lombriga.apresenta();
+      lombriga.mover();
+      lombriga.apresenta();
+      lombriga.mover();
+      lombriga.apresenta();
+      lombriga.crescer();
+      lombriga.apresenta();
+      lombriga.crescer();
+      lombriga.apresenta();
+      lombriga.crescer();
+      lombriga.apresenta();
+      lombriga.mover();
+      lombriga.apresenta();
    }
 
 }

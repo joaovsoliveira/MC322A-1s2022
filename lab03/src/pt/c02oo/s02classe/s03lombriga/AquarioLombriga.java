@@ -52,6 +52,7 @@ public class AquarioLombriga {
             else{
                 //se a operação mover estiver no limite, vira de lado
                 this.virar();
+                pos_inicio = tam_lombriga;
             }
         }
         else{
@@ -60,6 +61,7 @@ public class AquarioLombriga {
             }
             else{
                 this.virar();
+                pos_inicio = tam_aquario - tam_lombriga;
             }
         }
             
@@ -97,22 +99,29 @@ public class AquarioLombriga {
                 if(i<pos_inicio || i>(pos_inicio+tam_lombriga-1)){
                     System.out.print("#");
                 }
+                if(i>pos_inicio && i<(pos_inicio+tam_lombriga)){
+                    System.out.print("@");
+                }
                 if(i==pos_inicio){
                     System.out.print("O");
-                    for(int j=1; j<tam_lombriga; j++){
-                        System.out.print("@"); 
-                    }
-                    i += (tam_lombriga-1);
                 }
             }
             System.out.print("\n");
         }
         else{
-            for(int i=tam_aquario; i>=1; i--){
-                if(i<pos_inicio || i>(pos_inicio+tam_lombriga)){
+            for(int i=1; i<tam_aquario+1; i++){
+                if(i<(pos_inicio-tam_lombriga+1) || i>pos_inicio){
                     System.out.print("#");
-                } 
+                }
+                if((pos_inicio-tam_lombriga+1)<=i && i<pos_inicio){
+                    System.out.print("@"); 
+                }
+                if(i==pos_inicio){
+                    System.out.print("O");
+                }
             }
+            System.out.print("\n"); 
         }
     }
 }
+
