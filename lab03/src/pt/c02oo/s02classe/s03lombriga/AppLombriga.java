@@ -1,46 +1,22 @@
-package src.pt.c02oo.s02classe.s03lombriga;
 
 public class AppLombriga {
 
    public static void main(String[] args) {
-      /*
-       * Toolkit tk = Toolkit.start();
-       * 
-       * String lombrigas[] = tk.recuperaLombrigas();
-       * 
-       * for (int l = 0; l < lombrigas.length; l++)
-       * System.out.println(lombrigas[l]);
-       * 
-       * tk.gravaPasso("=====");
-       * tk.gravaPasso("##O@@@##");
-       * tk.gravaPasso("#O@@@###");
-       * tk.gravaPasso("#O@@@@##");
-       * tk.gravaPasso("O@@@@###");
-       * tk.gravaPasso("@@@@O###");
-       * tk.gravaPasso("#@@@@O##");
-       * 
-       * tk.stop();
-       */
-      AquarioLombriga lombriga = new AquarioLombriga(8, 4, 3);
-      lombriga.apresenta();
-      lombriga.mover();
-      lombriga.apresenta();
-      lombriga.mover();
-      lombriga.apresenta();
-      lombriga.mover();
-      lombriga.apresenta();
-      lombriga.mover();
-      lombriga.apresenta();
-      lombriga.mover();
-      lombriga.apresenta();
-      lombriga.crescer();
-      lombriga.apresenta();
-      lombriga.crescer();
-      lombriga.apresenta();
-      lombriga.crescer();
-      lombriga.apresenta();
-      lombriga.mover();
-      lombriga.apresenta();
+      Toolkit tk = Toolkit.start();
+      
+      String lombrigas[] = tk.recuperaLombrigas();
+      
+      for (int l = 0; l < lombrigas.length; l++){
+         System.out.println(lombrigas[l]);
+         Animacao lombriga = new Animacao(lombrigas[l]);
+         tk.gravaPasso("=====");
+         tk.gravaPasso(lombriga.apresenta());
+         for(int i=0; i<lombrigas[l].length()-6; i++){
+            lombriga.passo();
+            tk.gravaPasso(lombriga.apresenta());
+         }
+      }
+      tk.stop();
    }
 
 }
