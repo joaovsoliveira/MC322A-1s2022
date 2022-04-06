@@ -1,4 +1,3 @@
-package src.pt.c02oo.s02classe.s03lombriga;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
