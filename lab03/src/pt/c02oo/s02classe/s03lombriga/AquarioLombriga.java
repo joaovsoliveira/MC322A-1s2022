@@ -1,3 +1,4 @@
+package pt.c02oo.s02classe.s03lombriga;
 
 public class AquarioLombriga {
     // define os atributos do objeto, considerando a lombriga e o aquario o mesmo
