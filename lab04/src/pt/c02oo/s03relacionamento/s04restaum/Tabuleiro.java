@@ -25,10 +25,6 @@ public class Tabuleiro {
         //remove a peça do centro
         tabuleiro[3][3] = new Peca(3,3,'-');
     }
-    //retorna o ponteiro para a peça
-    /* public Peca getPeca(int x, int y){
-        return tabuleiro[x][y];
-    } */
 
     //retorna o valor da peça desejada
     public char getValor(int x, int y){
